@@ -54,6 +54,7 @@ input[type="submit"] {
 
 .wrapper.act {
   transform: translate(57%);
+  transition: 0.9s ease-in-out;
 }
 
 @media (max-width:500px) {
