@@ -1,0 +1,50 @@
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: grey;
+  display: none;
+}
+
+@media (max-width:500px) {
+  .modal {
+    width: 72%;
+  }
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal .menu {
+  width: 100%;
+}
+
+.modal .menu__list {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+
+}
+
+.modal .menu__list-item {
+  color: white;
+  margin-bottom: 10px;
+  border-bottom: 1px solid white;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.modal__close {
+  position: absolute;
+  background-image: url("../img/modal/close.png");
+  background-repeat: no-repeat;
+  background-size: 40%;
+  width: 50px;
+  height: 50px;
+  top: 6px;
+  right: -50px;
+  cursor: pointer;
+}

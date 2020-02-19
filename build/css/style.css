@@ -1,0 +1,353 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ---------Шрифыт----------- */
+/* -------------------------------- */
+* {
+  box-sizing: border-box;
+  outline: none; }
+
+/* Стили поумолчанию для всех элементов */
+body {
+  color: #000000;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  overflow-x: hidden;
+  background-color: #fbfcfc; }
+
+/* Поведение вхех картинок поумолчанию */
+img {
+  max-width: 100%;
+  height: auto; }
+
+/* Стили ссылок поумолчанию */
+a {
+  text-decoration: none; }
+
+a:hover {
+  transition-duration: 0.3s; }
+
+/* Убрать обводку поумолчанию у кнопок, font: inherit - позволит наследовать стили родителя (у кнопки сили шрифтов заданы поумолчанию) */
+button {
+  border: none;
+  outline: none;
+  font: inherit; }
+
+button,
+input[type="submit"] {
+  cursor: pointer; }
+
+/* Обёртка всего - идёт после body */
+.wrapper {
+  position: relative; }
+
+.wrapper.act {
+  transform: translate(57%); }
+
+@media (max-width: 500px) {
+  .wrapper.act {
+    transform: translate(68%); } }
+
+/* Класс который устанавливет рабочую область для контента */
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box; }
+
+/* Медиа запрос - на этом разрешении экрана изменятся отступы по краям */
+@media (max-width: 1110px) {
+  .container {
+    padding: 0 15px; } }
+
+.nav__list {
+  display: flex;
+  justify-content: center; }
+
+.logo,
+.menu__list-item,
+.help__button,
+.line-block {
+  padding: 10px 10px;
+  background-color: grey;
+  margin-left: 3px;
+  color: black;
+  height: 50px; }
+
+.burger__menu {
+  display: none;
+  width: 60px;
+  height: 50px;
+  font-size: 40px;
+  background-color: grey;
+  color: white;
+  cursor: pointer; }
+
+.fas.fa-bars {
+  margin: auto;
+  padding: 0 10px; }
+
+@media (max-width: 750px) {
+  .burger__menu {
+    display: flex; } }
+
+.logo {
+  width: 250px; }
+
+.menu__list {
+  display: flex; }
+
+@media (max-width: 750px) {
+  .menu__list {
+    display: none; } }
+
+.menu__list-item {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.line-block {
+  width: 300px; }
+
+.help__button {
+  display: block; }
+
+.content {
+  margin-top: 10px; }
+
+.content-box__list {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 33%; }
+
+@media (max-width: 750px) {
+  .content-box__list {
+    flex-wrap: wrap; } }
+
+.content-box__list-item {
+  background: grey;
+  width: 420px;
+  padding: 0 10px;
+  padding-bottom: 30px;
+  margin-right: 10px; }
+
+@media (max-width: 750px) {
+  .content-box__list-item {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 10px; } }
+
+.content-box__list-item:last-child {
+  margin-right: 0px; }
+
+.content-box__list-item--aside,
+.content-box__list-item--column {
+  width: 250px;
+  height: 700px;
+  background-color: grey; }
+
+.content-box__list-item--aside {
+  height: 250px; }
+
+.content-box__list-item--column {
+  width: 200px; }
+
+@media (max-width: 750px) {
+  .content-box__list-item--aside,
+  .content-box__list-item--column {
+    width: 100%; } }
+
+@media (max-width: 750px) {
+  .content-box__list-item--column {
+    width: 100%;
+    height: 105px; } }
+
+.user {
+  margin-top: 60px; }
+
+.user__list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  margin-bottom: 10px; }
+
+.user-photo {
+  background-color: white;
+  width: 320px;
+  height: 80px;
+  margin-right: 10px; }
+
+@media (max-width: 750px) {
+  .user-photo {
+    width: 150px; } }
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: grey;
+  display: none; }
+
+@media (max-width: 500px) {
+  .modal {
+    width: 72%; } }
+
+.modal.active {
+  display: flex; }
+
+.modal .menu {
+  width: 100%; }
+
+.modal .menu__list {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px; }
+
+.modal .menu__list-item {
+  color: white;
+  margin-bottom: 10px;
+  border-bottom: 1px solid white;
+  font-weight: bold;
+  display: inline-block; }
+
+.modal__close {
+  position: absolute;
+  background-image: url("../img/modal/close.png");
+  background-repeat: no-repeat;
+  background-size: 40%;
+  width: 50px;
+  height: 50px;
+  top: 6px;
+  right: -50px;
+  cursor: pointer; }

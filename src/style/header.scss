@@ -1,0 +1,65 @@
+.nav__list {
+	display: flex;
+	justify-content: center;
+}
+
+.logo,
+.menu__list-item,
+.help__button,
+.line-block {
+	padding: 10px 10px;
+	background-color: grey;
+	margin-left: 3px;
+	color: black;
+	height: 50px;
+}
+
+.burger__menu {
+	display: none;
+	width: 60px;
+	height: 50px;
+	font-size: 40px;
+	background-color: grey;
+	color: white;
+	cursor: pointer;
+}
+
+.fas.fa-bars {
+	margin: auto;
+	padding: 0 10px;
+
+}
+
+@media (max-width:750px) {
+	.burger__menu {
+		display: flex;
+	}
+}
+
+.logo {
+	width: 250px;
+}
+
+.menu__list {
+	display: flex;
+}
+
+@media (max-width:750px) {
+	.menu__list {
+		display: none;
+	}
+}
+
+.menu__list-item {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.line-block {
+
+	width: 300px;
+}
+
+.help__button {
+	display: block;
+}
