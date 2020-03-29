@@ -1,15 +1,21 @@
 header.header
 	.container
-		nav.nav
-			.nav__list
-				.burger__menu#button
-					i.fas.fa-bars
-				.logo Logo big Image
-					img(src="", alt="")
-				.menu
-					.menu__list
-						a(href="").menu__list-item Menu1
-						a(href="").menu__list-item Menu2
-						a(href="").menu__list-item Menu3
-				.line-block
-				a(href="").help__button Help Button
+		.header__row-1
+			.header-inner
+				.header-inner__list
+					.header-inner__list-item
+						a(href="#").logo
+							img(src="img/header/logo/logo.png", alt="")
+					.header-inner__list-item
+						.search
+							img(src="img/header/icon/search.svg", alt="")
+					.header-inner__list-item
+						a(href="#").burger-menu
+			.header__row-2
+				.header-wrap
+					.header-promo
+						h1.header-title Work around you and your team
+						.header-text From ads that dance or sing to MTV-like commercials, online advertisers are now using a new type of technology “rich media” to attract consumers.
+						include ../blocks/button.pug
+					.header-bg
+						img(src="img/header/Placeholder.jpg", alt="")

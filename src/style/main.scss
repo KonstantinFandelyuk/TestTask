@@ -1,80 +1,105 @@
 /* ---------Шрифыт----------- */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic");
-
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700&display=swap');
 /* -------------------------------- */
 
 * {
-  box-sizing: border-box;
-  outline: none;
+	box-sizing: border-box;
 }
 
 /* Стили поумолчанию для всех элементов */
 body {
-  color: #000000;
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  overflow-x: hidden;
-  background-color: #fbfcfc;
+	color: $color-text;
+	font-family: $Fira-fonts;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 28px;
+	overflow-x: hidden;
+	background: #F4F4F4;
+}
+
+@media (max-width: 500px) {
+	body {
+		font-size: 16px;
+	}
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 60px;
+	line-height: 70px;
+	letter-spacing: -1px;
+	color: $color-h1;
+}
+
+@media (max-width: 490px) {
+	h1 {
+		font-size: 50px;
+	}
+}
+
+h3 {
+	color: $color-h3;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 50px;
+	letter-spacing: -1px;
+}
+
+@media (max-width: 490px) {
+	h3 {
+		font-size: 30px;
+	}
+}
+
+section {
+	margin-top: 131px;
 }
 
 /* Поведение вхех картинок поумолчанию */
 img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 /* Стили ссылок поумолчанию */
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 a:hover {
-  transition-duration: 0.3s;
+	transition-duration: 0.3s;
 }
 
 /* Убрать обводку поумолчанию у кнопок, font: inherit - позволит наследовать стили родителя (у кнопки сили шрифтов заданы поумолчанию) */
 button {
-  border: none;
-  outline: none;
-  font: inherit;
+	border: none;
+	outline: none;
+	font: inherit;
 }
 
 button,
 input[type="submit"] {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 /* Обёртка всего - идёт после body */
-
 .wrapper {
-  position: relative;
-}
-
-.wrapper.act {
-  transform: translate(57%);
-  transition: 0.9s ease-in-out;
-}
-
-@media (max-width:500px) {
-  .wrapper.act {
-    transform: translate(68%);
-  }
+	position: relative;
 }
 
 /* Класс который устанавливет рабочую область для контента */
 .container {
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-  box-sizing: border-box;
+	max-width: 1130px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 10px;
+	box-sizing: border-box;
 }
 
 /* Медиа запрос - на этом разрешении экрана изменятся отступы по краям */
 @media (max-width: 1110px) {
-  .container {
-    padding: 0 15px;
-  }
+	.container {
+		padding: 0 15px;
+	}
 }
