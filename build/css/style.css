@@ -609,3 +609,11 @@ input[type="submit"] {
     align-items: center; }
   .brand__list-item {
     margin-bottom: 15px; } }
+
+svg {
+  opacity: 0.15;
+  transition: 0.4s ease-in-out; }
+
+svg:hover {
+  transition: 0.4s ease-in-out;
+  opacity: 1; }
