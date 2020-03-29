@@ -321,7 +321,7 @@ input[type="submit"] {
 .button:hover,
 .button:focus {
   color: #4737FF;
-  background: #E5E5E5;
+  background: #F4F4F4;
   border: 1px solid #4737FF;
   transition: 0.5s ease-in-out; }
 
