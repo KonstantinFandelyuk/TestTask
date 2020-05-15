@@ -1,123 +1,105 @@
-.header__row-1 {
-	margin-top: 43px;
-	margin-bottom: 60px;
-}
-
-.header-inner__list {
-	display: flex;
-	justify-content: space-between;
-}
-
-.burger-menu {
-	width: 34px;
-	height: 3px;
-	background-color: $color-text;
-	display: block;
+.header {
 	position: relative;
-}
 
-.burger-menu::before {
-	content: "";
-	top: 8px;
-	right: 0px;
-	position: absolute;
-	width: 18px;
-	height: 3px;
-	background-color: $color-text;
-}
+	&-wrap {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 4.8rem;
+		position: relative;
+	}
 
-// ------------
-.header-wrap {
-	display: flex;
-	margin-top: 60px;
-}
+	&-inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		z-index: 10;
+		position: relative;
 
-@media (max-width: 900px) {
-	.header-wrap {
-		flex-wrap: wrap;
-		flex-direction: column-reverse;
-		text-align: center;
-		justify-content: center;
+		@media (max-width: 414px) {
+			align-items: center;
+		}
 	}
 }
 
-.header-promo {
-	max-width: 770px;
-	margin-top: 66px;
-}
-
-@media (max-width: 900px) {
-	.header-promo {
-		margin: 66px auto 0 auto;
-	}
-}
-
-.header-text {
-	margin-top: 30px;
-	margin-bottom: 56px;
-}
-
+// ---------------Анимация----------------
 .header-bg {
-	width: 100%;
-	height: 828px;
-	position: relative;
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	transform: translate(-50%, 1%);
+	z-index: 1;
 }
 
-@media (max-width: 1300px) {
-	.header-bg {
-		width: 70%;
-	}
+.bg {
+	width: 610px;
+	height: 726px;
 
-	@media (max-width: 1066px) {
-		.header-bg {
-			height: 700px;
-		}
-	}
+	@media (max-width: 1024px) {
+		width: 506px;
+		height: 605px;
 
-	@media (max-width: 900px) {
-		.header-bg {
-			margin: 0 auto;
-			height: 600px;
-			width: 55%;
-		}
-	}
+		@media (max-width: 768px) {
+			width: 628px;
+			height: 789px;
 
-	@media (max-width: 800px) {
-		.header-bg {
-			width: 65%;
-		}
-	}
+			@media (max-width: 610px) {
+				width: 392px;
+				height: 493px;
 
-	@media (max-width: 600px) {
-		.header-bg {
-			width: 80%;
-		}
-
-		@media (max-width: 495px) {
-			.header-bg {
-				height: 400px;
-				width: 90%;
+				@media (max-width: 375px) {
+					width: 339px;
+					height: 429px;
+				}
 			}
 		}
 	}
 }
 
-.header-bg>img {
-	position: absolute;
-	top: 0;
-	right: -100px;
+
+.path {
+	stroke-dasharray: 726;
+	stroke-dashoffset: 726;
+	animation: dash 5s ease-in-out alternate infinite;
 }
 
-@media (max-width: 1300px) {
-	.header-bg>img {
-		right: 0px;
+@keyframes dash {
+	from {
+		stroke-dashoffset: 726;
 	}
 
-	@media (max-width: 900px) {
-		.header-bg>img {
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+// -------------------------------------
+.nav {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: -1.4rem;
+
+	&__link {
+		margin-bottom: 1.4rem;
+		font-family: "TTTravels";
+		font-weight: 300;
+		font-size: 1.1rem;
+		letter-spacing: 0.02em;
+		text-transform: capitalize;
+		color: #000;
+		transition: 0.5s ease-in-out;
+
+		&:hover {
+			color: blue;
+			transition: 0.5s ease-in-out;
 		}
+	}
+}
+
+
+@media (max-width: 414px) {
+	.nav {
+		display: none;
 	}
 }

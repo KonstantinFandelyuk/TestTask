@@ -1,0 +1,41 @@
+.swiper-container {
+  width: 90%;
+  height: 100px;
+  position: absolute;
+  top: 47%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+}
+
+.swiper-slide {
+  user-select: none;
+  font-family: "Schnyder";
+  font-size: 12.5rem;
+  text-transform: uppercase;
+  mix-blend-mode: darken;
+  box-sizing: border-box;
+  transform: rotate(-1.5deg);
+  position: relative;
+  color: transparent;
+  -webkit-text-stroke: 1px #580300;
+
+  &-active {
+    color: #580300;
+    mix-blend-mode: darken;
+    text-align: center;
+    transform: rotate(0deg);
+    letter-spacing: 1rem;
+  }
+}
+
+.slide-text {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+
+  @media (max-width: 1024px) {
+    font-size: 9.6rem;
+  }
+}

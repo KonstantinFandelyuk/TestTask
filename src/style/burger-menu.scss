@@ -1,0 +1,49 @@
+.burger-menu {
+	display: none;
+
+	@media (max-width: 414px) {
+		display: block;
+	}
+}
+
+.burger {
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	transition: transform 400ms;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.hamRotate.active {
+	transform: rotate(45deg);
+}
+
+.hamRotate180.active {
+	transform: rotate(180deg);
+}
+
+.line {
+	fill: none;
+	transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+	stroke: rgba(40, 40, 40, 0.57);
+	stroke-width: .5;
+	stroke-linecap: round;
+}
+
+.burgerLine .top {
+	stroke-dasharray: 40 139;
+}
+
+.burgerLine .bottom {
+	stroke-dasharray: 40 180;
+}
+
+.burgerLine.active .top {
+	stroke-dashoffset: -98px;
+}
+
+.burgerLine.active .bottom {
+	stroke-dashoffset: -138px;
+}
