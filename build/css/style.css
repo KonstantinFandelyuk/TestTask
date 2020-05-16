@@ -734,7 +734,7 @@ input[type="submit"] {
 
 @media (max-width: 450px) {
   .header-wrap {
-    padding: 3.8rem; } }
+    padding: 1.6rem 2.0rem; } }
 
 .header-bg {
   position: absolute;
