@@ -11,12 +11,12 @@ function mouseMove(event) {
   let rightImage = document.querySelector(".header-image__list-item--right");
   let windowWidth = `${window.innerWidth / 2}`;
   if (event.pageX > windowWidth) {
-    leftImage.classList.add("mouseMove");
-    centerImage.classList.add("mouseMove");
-    rightImage.classList.add("mouseMove");
+    leftImage.style.transform = "rotate(-1.1deg)";
+    centerImage.style.transform = "rotate(-1.5deg)";
+    rightImage.style.transform = "rotate(-2.03deg)";
   } else {
-    leftImage.classList.remove("mouseMove");
-    centerImage.classList.remove("mouseMove");
-    rightImage.classList.remove("mouseMove");
+    leftImage.style.transform = "rotate(1.1deg)";
+    centerImage.style.transform = "rotate(1.5deg)";
+    rightImage.style.transform = "rotate(2.03deg)";
   }
 }

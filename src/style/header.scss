@@ -23,6 +23,12 @@
 	}
 }
 
+@media (max-width: 450px) {
+	.header-wrap {
+		padding: 3.8rem;
+	}
+}
+
 // ---------------Анимация----------------
 .header-bg {
 	position: absolute;

@@ -2,8 +2,8 @@
   width: 90%;
   height: 100px;
   position: absolute;
-  top: 47%;
-  left: 43%;
+  top: 46%;
+  left: 46%;
   transform: translate(-50%, -50%);
 }
 
@@ -37,5 +37,14 @@
 
   @media (max-width: 1024px) {
     font-size: 9.6rem;
+    left: 54%;
+  }
+
+  @media (max-width: 555px) {
+    font-size: 4.8rem;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 4.4rem;
   }
 }
